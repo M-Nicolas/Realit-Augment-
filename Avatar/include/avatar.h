@@ -1,72 +1,105 @@
 #ifndef _AVATAR_H_
 #define _AVATAR_H_
-#include "gl_objects.h"
+
+#include <SDL/SDL.h>
+#include "GL/gl.h"
 #include "events.h"
+#include "surface.h"
 #include "sensor.h"
-#include<SDL/SDL.h>
-#include<GL/glew.h>
-#include<GL/gl.h>
-#include<GL/glu.h>
 
-class CAvatar : public CEvent
-{
-    bool should_be_running;
-    bool needs_rendering;
-    int window_width;
-    int window_height;
-    const char* window_title;
-
-    SDL_Surface* sdl_pimage;
-
-    float world_rx;
-    float world_ry;
-
-    float world_origin_x;
-    float world_origin_y;
-    float world_origin_z;
-
-    float camera_tx;
-    float camera_ty;
-    float camera_tz;
-
-    float camera_min_tz;
-    float camera_aspect_ratio;
-    float camera_min_z;
-    float camera_max_z;
-    float camera_fovy;
-
-    GLuint identifiant_texture;
-
-    bool sensor_mode;
-    CSensor sensor;
-
+class CAvatar : public CEvent{
 public:
     CAvatar();
     ~CAvatar();
-    int OnExecute(bool mode);
-    bool OnInit(bool mode);
-    void OnCleanup();
-    void OnLoop();
-    void OnRender();
-    void InitSceneConstants();
-    void SetPerspectiveProjectionMatrix();
-    void SetOrthoProjectionMatrix();
-    void DrawDemo();
-    void DrawSensor();
-    void DrawDepth();
-    void DrawColor();
+    int OnExecute(bool use_sens);
 
-    void OnEvent(SDL_Event* Event);
+    // initialisation of the avatar (frame, opengl, camera, texture, lighting, matrix modelview)
+    bool OnInit(bool use_sens);
+
+    // to free the frame and the texture before exit
+    void OnCleanup();
+
+    // empty
+    void OnLoop();
+
+    // use each time we need to refresh the frame
+    void OnRender(bool use_sens);
+
+    // to draw the cube / arm
+    void DrawDemo();
+
+    // to use the sensor into the frame
+    void DrawSensor();
+
+    /* event gestion */
     void OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode);
-    void OnMouseWheelUp();
-    void OnMouseWheelDown();
-    void OnLButtonUp(int mX, int mY);
     void OnLButtonDown(int mX, int mY);
-    void OnMouseMove(int mX, int mY, int relX, int relY, bool Left, bool Right, bool Middle);
+    void OnRButtonDown(int mX, int mY);
+    void OnMButtonDown(int mX, int mY);
+    void OnMouseMove(int mX, int mY, int relX, int relY, bool Left,bool Right,bool Middle);
+    void OnMouseWheel(bool Up, bool Down);
     void OnResize(int w, int h);
     void OnExpose();
     void OnExit();
+    /* event gestion */
+
+    // to init/ re-init the camera and the world position
+    void InitSceneConstants();
+
+    // to set the matriw projection
+    void SetPerspectiveProjectionMatrix();
+    void SetOrthoProjectionMatrix();
+
+private:
+    bool use_sensor;
+    bool sensor_mode;
+    bool should_be_running;
+    bool needs_rendering;
+
+    int window_width;
+    int window_height;
+
+    float world_rx;
+    float world_ry;
+    float world_origin_z;
+    float world_origin_y;
+    float world_origin_x;
+
+    double camera_min_tz;
+    double camera_tx;
+    double camera_ty;
+    double camera_tz;
+    double camera_min_z;
+    double camera_max_z;
+    double camera_aspect_ratio;
+    double camera_fovy;
+
+    double avant_bras_x;
+    double avant_bras_y;
+    double avant_bras_z;
+    double avant_bras_shape;
+    double avant_bras_angle;
+
+    double bras_x;
+    double bras_y;
+    double bras_z;
+    double bras_shape;
+    double bras_angle;
+
+    double main_x;
+    double main_y;
+    double main_z;
+    double main_shape;
+    double main_angle;
+
+    const char* window_title;
+
+    SDL_Surface*    Surf_Test;
+    SDL_Surface* sdl_pimage;
+
+    CSensor sensor;
+
+    GLuint texture;
 };
 
 #endif
-

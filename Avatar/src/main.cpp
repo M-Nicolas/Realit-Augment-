@@ -1,8 +1,10 @@
 #include <iostream>
 #include "avatar.h"
 
-int main(int argc, char *argv[]) {
-    std::cout << "\nThe Avatar Project !" <<std::endl;
+using namespace std;
+
+int main(){
+    cout << "\nThe Avatar Project!" << endl;
 
     CAvatar theAvatar;
     return theAvatar.OnExecute(false);

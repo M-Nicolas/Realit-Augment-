@@ -1,53 +1,84 @@
-#include "sensor.h"
 #include <iostream>
+
+#include "sensor.h"
+
 using namespace std;
 
-CSensor::CSensor() {}
-
-CSensor::~CSensor() {
-    if (status != openni::STATUS_ERROR) {
-        m_colorStream.stop();
-        m_colorStream.destroy();
-
-        m_depthStream.stop();
-        m_depthStream.destroy();
-
-        openni::OpenNI::shutdown();
-    }
-}
-
-bool CSensor::OnInit(bool show_color_stream) {
-    //On initialise OpenNI
-    status = openni::OpenNI::initialize();
-    m_device.open(openni::ANY_DEVICE);
-
-    m_colorStream.create(m_device, openni::SENSOR_COLOR);
-    m_colorStream.start();
-    if (!m_colorStream.isValid()) {
-        cout << openni::OpenNI::getExtendedError() << endl;
+bool CSensor::OnInit(bool show_color_stream){
+    if(openni::STATUS_OK!=openni::OpenNI::initialize()){ // init openni
+        cout<<openni::OpenNI::getExtendedError()<<endl;
         return false;
     }
 
-    m_depthStream.create(m_device,openni::SENSOR_DEPTH);
-    m_depthStream.start();
-    if (!m_depthStream.isValid()) {
-        cout << openni::OpenNI::getExtendedError() << endl;
+    if(openni::STATUS_OK!=m_device.open(openni::ANY_DEVICE)){ // ouverture périph
+        cout<<openni::OpenNI::getExtendedError()<<endl;
         return false;
     }
 
-    if(m_device.isImageRegistrationModeSupported(openni::IMAGE_REGISTRATION_DEPTH_TO_COLOR))
-        m_device.setImageRegistrationMode(openni::IMAGE_REGISTRATION_DEPTH_TO_COLOR);
+    if(openni::STATUS_OK!=m_colorStream.create(m_device, openni::SENSOR_COLOR)){ // création flux vidéo
+        cout<<openni::OpenNI::getExtendedError()<<endl;
+        return false;
+    }
+    if(openni::STATUS_OK!=m_colorStream.start()){ //démarrage;
+        cout<<openni::OpenNI::getExtendedError()<<endl;
+        return false;
+    }
 
-    if(active_stream == depth_stream1)
-        m_device.setDepthColorSyncEnabled(true);
+    if(openni::STATUS_OK!=m_depthStream.create(m_device, openni::SENSOR_DEPTH)){
+        cout<<openni::OpenNI::getExtendedError()<<endl;
+        return false;
+    }
+    if(openni::STATUS_OK!=m_depthStream.start()){ //démarrage;
+        cout<<openni::OpenNI::getExtendedError()<<endl;
+        return false;
+    }
 
-    if(show_color_stream)
-        active_stream = color_stream;
-}
+    // init prop
+    if(m_device.isImageRegistrationModeSupported(openni::IMAGE_REGISTRATION_DEPTH_TO_COLOR)){
+        if(openni::STATUS_OK!=m_device.setImageRegistrationMode(openni::IMAGE_REGISTRATION_DEPTH_TO_COLOR)){
+            cout<<openni::OpenNI::getExtendedError()<<endl;
+            return false;
+        }
+    }
 
-bool CSensor::SetActiveStream(EActiveStream requested_stream) {
-    if (active_stream != requested_stream)
-        active_stream = requested_stream;
+
+    if(openni::STATUS_OK!=m_device.setDepthColorSyncEnabled(true)){
+        cout<<openni::OpenNI::getExtendedError()<<endl;
+        return false;
+    }
+
+
+    if(!m_device.isValid()) return false; // validité des flux vidéos
+
+    active_stream = show_color_stream? color_stream : depth_stream;
 
     return true;
+}
+
+void CSensor::switchStream(EActiveStream mode){
+    if(mode==color_stream){
+        if(openni::STATUS_OK!=m_device.setDepthColorSyncEnabled(true)){
+            cout<<openni::OpenNI::getExtendedError()<<endl;
+        }
+    }
+    else{
+        if(openni::STATUS_OK!=m_device.setDepthColorSyncEnabled(false)){
+            cout<<openni::OpenNI::getExtendedError()<<endl;
+        }
+    }
+}
+
+CSensor::CSensor(){
+
+}
+
+
+CSensor::~CSensor(){
+    m_colorStream.stop();
+    m_colorStream.destroy();
+
+    m_depthStream.stop();
+    m_depthStream.destroy();
+
+    openni::OpenNI::shutdown();
 }

@@ -1,11 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/Avatar.dir/src/sensor.cpp.o"
   "CMakeFiles/Avatar.dir/src/main.cpp.o"
+  "CMakeFiles/Avatar.dir/src/surface.cpp.o"
   "CMakeFiles/Avatar.dir/src/gl_objects.cpp.o"
   "CMakeFiles/Avatar.dir/src/avatar.cpp.o"
-  "CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o"
   "CMakeFiles/Avatar.dir/src/events.cpp.o"
-  "CMakeFiles/Avatar.dir/src/CSurface.cpp.o"
   "Avatar.pdb"
   "Avatar"
 )

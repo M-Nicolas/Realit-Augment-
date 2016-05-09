@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar"
+CMAKE_SOURCE_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build"
+CMAKE_BINARY_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Avatar.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Avatar.dir/flags.make
 
 CMakeFiles/Avatar.dir/src/sensor.cpp.o: CMakeFiles/Avatar.dir/flags.make
 CMakeFiles/Avatar.dir/src/sensor.cpp.o: ../src/sensor.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/sensor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/sensor.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sensor.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/sensor.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/sensor.cpp"
 
 CMakeFiles/Avatar.dir/src/sensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/sensor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sensor.cpp" > CMakeFiles/Avatar.dir/src/sensor.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/sensor.cpp" > CMakeFiles/Avatar.dir/src/sensor.cpp.i
 
 CMakeFiles/Avatar.dir/src/sensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/sensor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sensor.cpp" -o CMakeFiles/Avatar.dir/src/sensor.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/sensor.cpp" -o CMakeFiles/Avatar.dir/src/sensor.cpp.s
 
 CMakeFiles/Avatar.dir/src/sensor.cpp.o.requires:
 .PHONY : CMakeFiles/Avatar.dir/src/sensor.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/Avatar.dir/src/sensor.cpp.o.provides.build: CMakeFiles/Avatar.dir/src
 
 CMakeFiles/Avatar.dir/src/main.cpp.o: CMakeFiles/Avatar.dir/flags.make
 CMakeFiles/Avatar.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/main.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/main.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/main.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/main.cpp"
 
 CMakeFiles/Avatar.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/main.cpp" > CMakeFiles/Avatar.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/main.cpp" > CMakeFiles/Avatar.dir/src/main.cpp.i
 
 CMakeFiles/Avatar.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/main.cpp" -o CMakeFiles/Avatar.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/main.cpp" -o CMakeFiles/Avatar.dir/src/main.cpp.s
 
 CMakeFiles/Avatar.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/Avatar.dir/src/main.cpp.o.requires
@@ -95,19 +95,42 @@ CMakeFiles/Avatar.dir/src/main.cpp.o.provides: CMakeFiles/Avatar.dir/src/main.cp
 
 CMakeFiles/Avatar.dir/src/main.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/main.cpp.o
 
+CMakeFiles/Avatar.dir/src/surface.cpp.o: CMakeFiles/Avatar.dir/flags.make
+CMakeFiles/Avatar.dir/src/surface.cpp.o: ../src/surface.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/surface.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/surface.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/surface.cpp"
+
+CMakeFiles/Avatar.dir/src/surface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/surface.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/surface.cpp" > CMakeFiles/Avatar.dir/src/surface.cpp.i
+
+CMakeFiles/Avatar.dir/src/surface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/surface.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/surface.cpp" -o CMakeFiles/Avatar.dir/src/surface.cpp.s
+
+CMakeFiles/Avatar.dir/src/surface.cpp.o.requires:
+.PHONY : CMakeFiles/Avatar.dir/src/surface.cpp.o.requires
+
+CMakeFiles/Avatar.dir/src/surface.cpp.o.provides: CMakeFiles/Avatar.dir/src/surface.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/surface.cpp.o.provides.build
+.PHONY : CMakeFiles/Avatar.dir/src/surface.cpp.o.provides
+
+CMakeFiles/Avatar.dir/src/surface.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/surface.cpp.o
+
 CMakeFiles/Avatar.dir/src/gl_objects.cpp.o: CMakeFiles/Avatar.dir/flags.make
 CMakeFiles/Avatar.dir/src/gl_objects.cpp.o: ../src/gl_objects.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/gl_objects.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/gl_objects.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/gl_objects.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/gl_objects.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/gl_objects.cpp"
 
 CMakeFiles/Avatar.dir/src/gl_objects.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/gl_objects.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/gl_objects.cpp" > CMakeFiles/Avatar.dir/src/gl_objects.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/gl_objects.cpp" > CMakeFiles/Avatar.dir/src/gl_objects.cpp.i
 
 CMakeFiles/Avatar.dir/src/gl_objects.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/gl_objects.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/gl_objects.cpp" -o CMakeFiles/Avatar.dir/src/gl_objects.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/gl_objects.cpp" -o CMakeFiles/Avatar.dir/src/gl_objects.cpp.s
 
 CMakeFiles/Avatar.dir/src/gl_objects.cpp.o.requires:
 .PHONY : CMakeFiles/Avatar.dir/src/gl_objects.cpp.o.requires
@@ -120,17 +143,17 @@ CMakeFiles/Avatar.dir/src/gl_objects.cpp.o.provides.build: CMakeFiles/Avatar.dir
 
 CMakeFiles/Avatar.dir/src/avatar.cpp.o: CMakeFiles/Avatar.dir/flags.make
 CMakeFiles/Avatar.dir/src/avatar.cpp.o: ../src/avatar.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/avatar.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/avatar.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/avatar.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/avatar.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/avatar.cpp"
 
 CMakeFiles/Avatar.dir/src/avatar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/avatar.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/avatar.cpp" > CMakeFiles/Avatar.dir/src/avatar.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/avatar.cpp" > CMakeFiles/Avatar.dir/src/avatar.cpp.i
 
 CMakeFiles/Avatar.dir/src/avatar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/avatar.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/avatar.cpp" -o CMakeFiles/Avatar.dir/src/avatar.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/avatar.cpp" -o CMakeFiles/Avatar.dir/src/avatar.cpp.s
 
 CMakeFiles/Avatar.dir/src/avatar.cpp.o.requires:
 .PHONY : CMakeFiles/Avatar.dir/src/avatar.cpp.o.requires
@@ -141,42 +164,19 @@ CMakeFiles/Avatar.dir/src/avatar.cpp.o.provides: CMakeFiles/Avatar.dir/src/avata
 
 CMakeFiles/Avatar.dir/src/avatar.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/avatar.cpp.o
 
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o: CMakeFiles/Avatar.dir/flags.make
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o: ../src/sdlglutils.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sdlglutils.cpp"
-
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/sdlglutils.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sdlglutils.cpp" > CMakeFiles/Avatar.dir/src/sdlglutils.cpp.i
-
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/sdlglutils.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/sdlglutils.cpp" -o CMakeFiles/Avatar.dir/src/sdlglutils.cpp.s
-
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.requires:
-.PHONY : CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.requires
-
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.provides: CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.provides.build
-.PHONY : CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.provides
-
-CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o
-
 CMakeFiles/Avatar.dir/src/events.cpp.o: CMakeFiles/Avatar.dir/flags.make
 CMakeFiles/Avatar.dir/src/events.cpp.o: ../src/events.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/events.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/events.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/events.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/events.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/events.cpp"
 
 CMakeFiles/Avatar.dir/src/events.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/events.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/events.cpp" > CMakeFiles/Avatar.dir/src/events.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/events.cpp" > CMakeFiles/Avatar.dir/src/events.cpp.i
 
 CMakeFiles/Avatar.dir/src/events.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/events.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/events.cpp" -o CMakeFiles/Avatar.dir/src/events.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/events.cpp" -o CMakeFiles/Avatar.dir/src/events.cpp.s
 
 CMakeFiles/Avatar.dir/src/events.cpp.o.requires:
 .PHONY : CMakeFiles/Avatar.dir/src/events.cpp.o.requires
@@ -187,49 +187,24 @@ CMakeFiles/Avatar.dir/src/events.cpp.o.provides: CMakeFiles/Avatar.dir/src/event
 
 CMakeFiles/Avatar.dir/src/events.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/events.cpp.o
 
-CMakeFiles/Avatar.dir/src/CSurface.cpp.o: CMakeFiles/Avatar.dir/flags.make
-CMakeFiles/Avatar.dir/src/CSurface.cpp.o: ../src/CSurface.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Avatar.dir/src/CSurface.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Avatar.dir/src/CSurface.cpp.o -c "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/CSurface.cpp"
-
-CMakeFiles/Avatar.dir/src/CSurface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Avatar.dir/src/CSurface.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/CSurface.cpp" > CMakeFiles/Avatar.dir/src/CSurface.cpp.i
-
-CMakeFiles/Avatar.dir/src/CSurface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Avatar.dir/src/CSurface.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/src/CSurface.cpp" -o CMakeFiles/Avatar.dir/src/CSurface.cpp.s
-
-CMakeFiles/Avatar.dir/src/CSurface.cpp.o.requires:
-.PHONY : CMakeFiles/Avatar.dir/src/CSurface.cpp.o.requires
-
-CMakeFiles/Avatar.dir/src/CSurface.cpp.o.provides: CMakeFiles/Avatar.dir/src/CSurface.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/CSurface.cpp.o.provides.build
-.PHONY : CMakeFiles/Avatar.dir/src/CSurface.cpp.o.provides
-
-CMakeFiles/Avatar.dir/src/CSurface.cpp.o.provides.build: CMakeFiles/Avatar.dir/src/CSurface.cpp.o
-
 # Object files for target Avatar
 Avatar_OBJECTS = \
 "CMakeFiles/Avatar.dir/src/sensor.cpp.o" \
 "CMakeFiles/Avatar.dir/src/main.cpp.o" \
+"CMakeFiles/Avatar.dir/src/surface.cpp.o" \
 "CMakeFiles/Avatar.dir/src/gl_objects.cpp.o" \
 "CMakeFiles/Avatar.dir/src/avatar.cpp.o" \
-"CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o" \
-"CMakeFiles/Avatar.dir/src/events.cpp.o" \
-"CMakeFiles/Avatar.dir/src/CSurface.cpp.o"
+"CMakeFiles/Avatar.dir/src/events.cpp.o"
 
 # External object files for target Avatar
 Avatar_EXTERNAL_OBJECTS =
 
 Avatar: CMakeFiles/Avatar.dir/src/sensor.cpp.o
 Avatar: CMakeFiles/Avatar.dir/src/main.cpp.o
+Avatar: CMakeFiles/Avatar.dir/src/surface.cpp.o
 Avatar: CMakeFiles/Avatar.dir/src/gl_objects.cpp.o
 Avatar: CMakeFiles/Avatar.dir/src/avatar.cpp.o
-Avatar: CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o
 Avatar: CMakeFiles/Avatar.dir/src/events.cpp.o
-Avatar: CMakeFiles/Avatar.dir/src/CSurface.cpp.o
 Avatar: CMakeFiles/Avatar.dir/build.make
 Avatar: /usr/lib/x86_64-linux-gnu/libSDLmain.a
 Avatar: /usr/lib/x86_64-linux-gnu/libSDL.so
@@ -244,11 +219,10 @@ CMakeFiles/Avatar.dir/build: Avatar
 
 CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/sensor.cpp.o.requires
 CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/main.cpp.o.requires
+CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/surface.cpp.o.requires
 CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/gl_objects.cpp.o.requires
 CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/avatar.cpp.o.requires
-CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o.requires
 CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/events.cpp.o.requires
-CMakeFiles/Avatar.dir/requires: CMakeFiles/Avatar.dir/src/CSurface.cpp.o.requires
 .PHONY : CMakeFiles/Avatar.dir/requires
 
 CMakeFiles/Avatar.dir/clean:
@@ -256,6 +230,6 @@ CMakeFiles/Avatar.dir/clean:
 .PHONY : CMakeFiles/Avatar.dir/clean
 
 CMakeFiles/Avatar.dir/depend:
-	cd "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles/Avatar.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles/Avatar.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Avatar.dir/depend
 

@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar"
+CMAKE_SOURCE_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build"
+CMAKE_BINARY_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -110,30 +110,6 @@ Avatar: cmake_check_build_system
 Avatar/fast:
 	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/build
 .PHONY : Avatar/fast
-
-src/CSurface.o: src/CSurface.cpp.o
-.PHONY : src/CSurface.o
-
-# target to build an object file
-src/CSurface.cpp.o:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/CSurface.cpp.o
-.PHONY : src/CSurface.cpp.o
-
-src/CSurface.i: src/CSurface.cpp.i
-.PHONY : src/CSurface.i
-
-# target to preprocess a source file
-src/CSurface.cpp.i:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/CSurface.cpp.i
-.PHONY : src/CSurface.cpp.i
-
-src/CSurface.s: src/CSurface.cpp.s
-.PHONY : src/CSurface.s
-
-# target to generate assembly for a file
-src/CSurface.cpp.s:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/CSurface.cpp.s
-.PHONY : src/CSurface.cpp.s
 
 src/avatar.o: src/avatar.cpp.o
 .PHONY : src/avatar.o
@@ -231,30 +207,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/sdlglutils.o: src/sdlglutils.cpp.o
-.PHONY : src/sdlglutils.o
-
-# target to build an object file
-src/sdlglutils.cpp.o:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o
-.PHONY : src/sdlglutils.cpp.o
-
-src/sdlglutils.i: src/sdlglutils.cpp.i
-.PHONY : src/sdlglutils.i
-
-# target to preprocess a source file
-src/sdlglutils.cpp.i:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.i
-.PHONY : src/sdlglutils.cpp.i
-
-src/sdlglutils.s: src/sdlglutils.cpp.s
-.PHONY : src/sdlglutils.s
-
-# target to generate assembly for a file
-src/sdlglutils.cpp.s:
-	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.s
-.PHONY : src/sdlglutils.cpp.s
-
 src/sensor.o: src/sensor.cpp.o
 .PHONY : src/sensor.o
 
@@ -279,6 +231,30 @@ src/sensor.cpp.s:
 	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sensor.cpp.s
 .PHONY : src/sensor.cpp.s
 
+src/surface.o: src/surface.cpp.o
+.PHONY : src/surface.o
+
+# target to build an object file
+src/surface.cpp.o:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/surface.cpp.o
+.PHONY : src/surface.cpp.o
+
+src/surface.i: src/surface.cpp.i
+.PHONY : src/surface.i
+
+# target to preprocess a source file
+src/surface.cpp.i:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/surface.cpp.i
+.PHONY : src/surface.cpp.i
+
+src/surface.s: src/surface.cpp.s
+.PHONY : src/surface.s
+
+# target to generate assembly for a file
+src/surface.cpp.s:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/surface.cpp.s
+.PHONY : src/surface.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,9 +264,6 @@ help:
 	@echo "... Avatar"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... src/CSurface.o"
-	@echo "... src/CSurface.i"
-	@echo "... src/CSurface.s"
 	@echo "... src/avatar.o"
 	@echo "... src/avatar.i"
 	@echo "... src/avatar.s"
@@ -303,12 +276,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/sdlglutils.o"
-	@echo "... src/sdlglutils.i"
-	@echo "... src/sdlglutils.s"
 	@echo "... src/sensor.o"
 	@echo "... src/sensor.i"
 	@echo "... src/sensor.s"
+	@echo "... src/surface.o"
+	@echo "... src/surface.i"
+	@echo "... src/surface.s"
 .PHONY : help
 
 

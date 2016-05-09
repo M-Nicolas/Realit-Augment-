@@ -3,28 +3,25 @@
 
 #include "OpenNI.h"
 
-enum EActiveStream {
-    color_stream,
-    depth_stream1
+enum EActiveStream{
+    color_stream = 0,
+    depth_stream = 1
 };
 
-class CSensor {
-public:
-    openni::Device m_device;
-
-    openni::VideoStream m_colorStream;
-    openni::VideoStream m_depthStream;
-    EActiveStream active_stream;
-
-    openni::Status status;
-
+class CSensor{
 public:
     CSensor();
     ~CSensor();
 
+
+    openni::Device m_device;
+    openni::VideoStream m_colorStream;
+    openni::VideoStream m_depthStream;
+    EActiveStream active_stream;
+
+    void switchStream(EActiveStream mode);
+
     bool OnInit(bool show_color_stream);
-    bool isValid(openni::Status status);
-    bool SetActiveStream(EActiveStream requested_stream);
 };
 
 #endif
