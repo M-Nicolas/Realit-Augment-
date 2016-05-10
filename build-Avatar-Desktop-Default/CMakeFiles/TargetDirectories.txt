@@ -1,0 +1,1 @@
+/home/rhoo/AppRep/Realit-Augment-/build-Avatar-Desktop-Default/CMakeFiles/Avatar.dir
