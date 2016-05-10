@@ -128,6 +128,9 @@ CMakeFiles/Avatar.dir/src/main.cpp.o: /usr/include/SDL/SDL_video.h
 CMakeFiles/Avatar.dir/src/main.cpp.o: /usr/include/SDL/begin_code.h
 CMakeFiles/Avatar.dir/src/main.cpp.o: /usr/include/SDL/close_code.h
 
+CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o: ../include/sdlglutils.h
+CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o: ../src/sdlglutils.cpp
+
 CMakeFiles/Avatar.dir/src/sensor.cpp.o: ../include/Linux-x86/OniPlatformLinux-x86.h
 CMakeFiles/Avatar.dir/src/sensor.cpp.o: ../include/OniCAPI.h
 CMakeFiles/Avatar.dir/src/sensor.cpp.o: ../include/OniCEnums.h

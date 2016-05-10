@@ -13,6 +13,11 @@ public:
     ~CAvatar();
     int OnExecute(bool use_sens);
 
+    //Arm rotation angle
+    float r1;
+    float r2;
+    float r3;
+
     // initialisation of the avatar (frame, opengl, camera, texture, lighting, matrix modelview)
     bool OnInit(bool use_sens);
 

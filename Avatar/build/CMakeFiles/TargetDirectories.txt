@@ -1,1 +1,1 @@
-/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles/Avatar.dir
+/home/rhoo/AppRep/Avatar/build/CMakeFiles/Avatar.dir

@@ -27,6 +27,10 @@ CAvatar::CAvatar(){
     this->world_origin_y = 0;
     this->world_origin_z = 0;
 
+    this->r1 = 30.0F;
+    this->r2 = -50.0F;
+    this->r3 = 20.0F;
+
     this->Surf_Test = NULL;
     this->sensor_mode = true;
 
@@ -191,7 +195,31 @@ void CAvatar::DrawDemo(){
 
     // dessin
     DrawFrame(world_origin_x, world_origin_y, world_origin_z, RDR_FRAME_LENGTH);
+
+    glPushMatrix();
+    glRotatef(r1,0.0F,1.0F,0.0F);
+    glTranslatef(1.5F,0.0F,0.0F);
+    glPushMatrix();
+    glScalef(3.0F,1.0F,1.0F);
     DrawCubeTexture(world_origin_x, world_origin_y, world_origin_z, RDR_CUBE_HALF_SIDE,texture);
+    glPopMatrix();
+    glTranslatef(1.5F,0.0F,0.0F);
+    glRotatef(r2,0.0F,1.0F,0.0F);
+    glTranslatef(1.5F,0.0F,0.0F);
+    glPushMatrix();
+    glScalef(3.0F,0.8F,0.8F);
+    DrawCubeTexture(world_origin_x, world_origin_y, world_origin_z, RDR_CUBE_HALF_SIDE,texture);
+    glPopMatrix();
+    glTranslatef(1.7F,0.0F,0.0F);
+    glRotatef(r3,1.0F,0.0F,0.0F);
+    glPushMatrix();
+    glScalef(0.6F,0.6F,0.6F);
+    DrawCubeTexture(world_origin_x, world_origin_y, world_origin_z, RDR_CUBE_HALF_SIDE,texture);
+    glPopMatrix();
+    glPopMatrix();
+    glPopMatrix();
+
+    //DrawCubeTexture(world_origin_x, world_origin_y, world_origin_z, RDR_CUBE_HALF_SIDE,texture);
 
     SDL_GL_SwapBuffers();
 }
@@ -377,6 +405,30 @@ void CAvatar::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode){
         sensor_mode = false;
         InitSceneConstants();
         SetPerspectiveProjectionMatrix();
+        needs_rendering = true;
+        break;
+    case SDLK_t:
+        r1 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_y:
+        r1 -= 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_g:
+        r2 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_h:
+        r2 -= 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_b:
+        r3 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_n:
+        r3 -= 5.0F;
         needs_rendering = true;
         break;
     default:

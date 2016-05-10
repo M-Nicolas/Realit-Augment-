@@ -17,7 +17,7 @@ CMakeFiles/Avatar.dir/src/avatar.cpp.o
  ../include/gl_objects.h
  ../include/sensor.h
  ../include/surface.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/avatar.cpp
+ /home/rhoo/AppRep/Avatar/src/avatar.cpp
  /usr/include/SDL/SDL.h
  /usr/include/SDL/SDL_active.h
  /usr/include/SDL/SDL_audio.h
@@ -46,7 +46,7 @@ CMakeFiles/Avatar.dir/src/avatar.cpp.o
  /usr/include/SDL/close_code.h
 CMakeFiles/Avatar.dir/src/events.cpp.o
  ../include/events.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/events.cpp
+ /home/rhoo/AppRep/Avatar/src/events.cpp
  /usr/include/SDL/SDL.h
  /usr/include/SDL/SDL_active.h
  /usr/include/SDL/SDL_audio.h
@@ -85,7 +85,7 @@ CMakeFiles/Avatar.dir/src/gl_objects.cpp.o
  ../include/OniVersion.h
  ../include/OpenNI.h
  ../include/gl_objects.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/gl_objects.cpp
+ /home/rhoo/AppRep/Avatar/src/gl_objects.cpp
 CMakeFiles/Avatar.dir/src/main.cpp.o
  ../include/Linux-x86/OniPlatformLinux-x86.h
  ../include/OniCAPI.h
@@ -101,7 +101,7 @@ CMakeFiles/Avatar.dir/src/main.cpp.o
  ../include/events.h
  ../include/sensor.h
  ../include/surface.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/main.cpp
+ /home/rhoo/AppRep/Avatar/src/main.cpp
  /usr/include/SDL/SDL.h
  /usr/include/SDL/SDL_active.h
  /usr/include/SDL/SDL_audio.h
@@ -128,6 +128,9 @@ CMakeFiles/Avatar.dir/src/main.cpp.o
  /usr/include/SDL/SDL_video.h
  /usr/include/SDL/begin_code.h
  /usr/include/SDL/close_code.h
+CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o
+ ../include/sdlglutils.h
+ /home/rhoo/AppRep/Avatar/src/sdlglutils.cpp
 CMakeFiles/Avatar.dir/src/sensor.cpp.o
  ../include/Linux-x86/OniPlatformLinux-x86.h
  ../include/OniCAPI.h
@@ -140,10 +143,10 @@ CMakeFiles/Avatar.dir/src/sensor.cpp.o
  ../include/OniVersion.h
  ../include/OpenNI.h
  ../include/sensor.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/sensor.cpp
+ /home/rhoo/AppRep/Avatar/src/sensor.cpp
 CMakeFiles/Avatar.dir/src/surface.cpp.o
  ../include/surface.h
- /home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/src/surface.cpp
+ /home/rhoo/AppRep/Avatar/src/surface.cpp
  /usr/include/SDL/SDL.h
  /usr/include/SDL/SDL_active.h
  /usr/include/SDL/SDL_audio.h

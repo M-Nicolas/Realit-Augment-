@@ -38,19 +38,22 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop"
+CMAKE_SOURCE_DIR = /home/rhoo/AppRep/Avatar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build"
+CMAKE_BINARY_DIR = /home/rhoo/AppRep/Avatar/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running interactive CMake command-line interface..."
-	/usr/bin/cmake -i .
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rhoo/AppRep/Avatar/build/CMakeFiles /home/rhoo/AppRep/Avatar/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/nicolas/Bureau/Cours/Réalité Augmenté/Avatar-clop/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rhoo/AppRep/Avatar/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -207,6 +210,30 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sdlglutils.o: src/sdlglutils.cpp.o
+.PHONY : src/sdlglutils.o
+
+# target to build an object file
+src/sdlglutils.cpp.o:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.o
+.PHONY : src/sdlglutils.cpp.o
+
+src/sdlglutils.i: src/sdlglutils.cpp.i
+.PHONY : src/sdlglutils.i
+
+# target to preprocess a source file
+src/sdlglutils.cpp.i:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.i
+.PHONY : src/sdlglutils.cpp.i
+
+src/sdlglutils.s: src/sdlglutils.cpp.s
+.PHONY : src/sdlglutils.s
+
+# target to generate assembly for a file
+src/sdlglutils.cpp.s:
+	$(MAKE) -f CMakeFiles/Avatar.dir/build.make CMakeFiles/Avatar.dir/src/sdlglutils.cpp.s
+.PHONY : src/sdlglutils.cpp.s
+
 src/sensor.o: src/sensor.cpp.o
 .PHONY : src/sensor.o
 
@@ -276,6 +303,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sdlglutils.o"
+	@echo "... src/sdlglutils.i"
+	@echo "... src/sdlglutils.s"
 	@echo "... src/sensor.o"
 	@echo "... src/sensor.i"
 	@echo "... src/sensor.s"
