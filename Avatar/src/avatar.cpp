@@ -31,6 +31,8 @@ CAvatar::CAvatar(){
     this->r2 = -50.0F;
     this->r3 = 20.0F;
     this->r4 = 0.0F;
+    this->r5 = 0.0F;
+    this->r6 = 20.0F;
 
     this->Surf_Test = NULL;
     this->sensor_mode = true;
@@ -207,6 +209,7 @@ void CAvatar::DrawDemo(){
     glPopMatrix();
     glTranslatef(1.5F,0.0F,0.0F);
     glRotatef(r2,0.0F,1.0F,0.0F);
+    glRotatef(r5,1.0F,0.0F,0.0F);
     glTranslatef(1.5F,0.0F,0.0F);
     glPushMatrix();
     glScalef(3.0F,0.8F,0.8F);
@@ -214,6 +217,7 @@ void CAvatar::DrawDemo(){
     glPopMatrix();
     glTranslatef(1.7F,0.0F,0.0F);
     glRotatef(r3,1.0F,0.0F,0.0F);
+    glRotatef(r6,0.0F,0.0F,1.0F);
     glPushMatrix();
     glScalef(0.6F,0.6F,0.6F);
     DrawCubeTexture(world_origin_x, world_origin_y, world_origin_z, RDR_CUBE_HALF_SIDE,texture);
@@ -439,6 +443,22 @@ void CAvatar::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode){
         break;
     case SDLK_o:
         r4 -= 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_k:
+        r5 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_l:
+        r5 -= 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_e:
+        r6 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_r:
+        r6 -= 5.0F;
         needs_rendering = true;
         break;
     default:
