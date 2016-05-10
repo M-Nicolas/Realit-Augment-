@@ -33,6 +33,7 @@ CAvatar::CAvatar(){
     this->r4 = 0.0F;
     this->r5 = 0.0F;
     this->r6 = 20.0F;
+    this->r7 = 0.0F;
 
     this->Surf_Test = NULL;
     this->sensor_mode = true;
@@ -202,6 +203,7 @@ void CAvatar::DrawDemo(){
     glPushMatrix();
     glRotatef(r1,0.0F,1.0F,0.0F);
     glRotatef(r4,1.0F,0.0F,0.0F);
+    glRotatef(r7,0.0F,0.0F,1.0F);
     glTranslatef(1.5F,0.0F,0.0F);
     glPushMatrix();
     glScalef(3.0F,1.0F,1.0F);
@@ -459,6 +461,14 @@ void CAvatar::OnKeyDown(SDLKey sym, SDLMod mod, Uint16 unicode){
         break;
     case SDLK_r:
         r6 -= 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_w:
+        r7 += 5.0F;
+        needs_rendering = true;
+        break;
+    case SDLK_x:
+        r7 -= 5.0F;
         needs_rendering = true;
         break;
     default:

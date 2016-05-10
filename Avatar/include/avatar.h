@@ -20,6 +20,7 @@ public:
     float r4;
     float r5;
     float r6;
+    float r7;
 
     // initialisation of the avatar (frame, opengl, camera, texture, lighting, matrix modelview)
     bool OnInit(bool use_sens);
